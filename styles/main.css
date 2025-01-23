@@ -11,18 +11,23 @@ html {
   :root {
     --body-bg-color: rgba(213, 225, 239, 1);
     --content-bg-color: #ffffff;
+    --h1-color:  #1F314F;
     --p-color: hsl(216, 15%, 48%);
   }
   
-  body {
+  body { 
     margin: 0;
-    background-color: var(--body-bg-color);  
+    background: linear-gradient(180deg, #D5E1EF 0%, #7A8189 100%);
+
   }
  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 1440px;
     height: 960px;
     max-width: 100%;
-    margin: 0 auto;    
+    margin: auto;    
   }
   .content {
     width: 320px;
@@ -37,34 +42,46 @@ html {
     width: 288px;
     height: 288px;
     max-width: 100%;
-    margin: 0 auto;
-    margin-bottom: 24px;
-    
+    margin: 0 auto;    
   }
   img {
     width: 100%;
     border-radius: 10px;
+  }  
+  .text {    
+    margin-top: 24px;
+    padding: 0px 16px;
   }
-  h1, p {
-    line-height: 1.2em;
-    font-family: Outfit, sans-serif;
-    font-size: 15px;
-    text-align: center;
-    letter-spacing: 0.0168em;
-  }
+  
   h1 {
+    width: 256px;
+    height: 52px;
+    font-family: 'Outfit', sans-serif;
+    font-style: normal;
+    text-align: center;
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 22px;
+    line-height: 120%;
+    color: var(--h1-color);
+
   }
   p {
+    width: 256px;
+    height:63px;
+    font-family: 'Outfit', sans-serif;
+    font-style: normal;
+    text-align: center;
     font-weight: 400;
+    font-size: 15px;
     color: var(--p-color);
-    max-width: 250px;
+    line-height: 140%;
+    letter-spacing: 0.2px;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media (max-width: 600px) {
     .container {
       width: 375px;
+      height: 812px;
     }
   }
 
